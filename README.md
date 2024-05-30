@@ -42,10 +42,12 @@ Create new Django apps for the menu, reservations and orders.
 * Level 2 (intermediate): The reservations app is implemented
 * Level 3 (advanced): The orders app is implemented
 
+**See also `TODO.md` for details on the individual tasks.**
+
 
 ## Week 2
 
-Use [Django REST Framework]() to create the following API endpoints:
+Use [Django REST Framework](https://www.django-rest-framework.org/) to create the following API endpoints:
 
     GET /api/menu 
     POST /api/reservations
@@ -55,9 +57,11 @@ Use [Django REST Framework]() to create the following API endpoints:
 
 **Requirements:**
 
-* Level 0 (minimum): `GET /menu` is implemented
-* Level 1 (basic): `GET /reservations` is implemented
-* Level 2 (intermediate): `POST /reservations` is implemented
-* Level 3 (advanced): `GET /orders` and `POST /orders` are implemented
+* Level 0 (minimum): `GET /api/menu` is implemented
+* Level 1 (basic): `GET /api/reservations` is implemented
+* Level 2 (intermediate): `POST /api/reservations` is implemented
+* Level 3 (advanced): `GET /api/orders` and `POST /api/orders` are implemented
 
 Optional: Refactor the forms in such way that they access the API via JavaScript.
+
+**See also `TODO.md` for details on the individual tasks.**
