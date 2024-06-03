@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#homepage {
+    background-image: url("/static/images/pizza-3010062_1920.jpg")
+}
+
+#about {
+    background-image: url("/static/images/pizza-dough.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: #f2f2f2;
+}
+
+#berlinistgeil {
+    background-image: url("/static/images/berlin.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: italic;
+    font-variation-settings:
+        "wdth" 87.5;
+    font-size: 2.5em
+   
+
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    opacity: 0.8;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+table,
+th,
+td {
+	border: thin solid;
+}
+
+td {
+	padding: .5em;
+}
+
+/* .image-about{
+    pass
+} */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    width: 100%
+}

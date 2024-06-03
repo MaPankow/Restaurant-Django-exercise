@@ -1,0 +1,78 @@
+<h2>Menu</h2>
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>VIZZE Restaurant</title>
+    <link rel="icon" type="image/png" href="static/images/favicon-256x256.png">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <!-- Rest of your HTML code -->
+    <header>
+        <h1>VIZZE</h1>
+        <h2>Your best vegan Pizze in Berlin</h2>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="description">
+        <h3>Here's what you've been waiting for</h3>
+    </section>
+
+    <section id="menu">
+        <table>
+            <tr class="table_head">
+              <th>Pizza</th>
+              <th>What's on it</th>
+              <th>     </th>
+              <th>   €   </th>
+            </tr>
+            <tr>
+              <td><strong>PHP / Extension: Laravel</em></strong>
+              <td>The classic one beneath the pizze.<br> 
+                Comes with cherry tomatoes, oregano, garlic and Mozarella.<br>
+                Ask for Laravel if you want salami on it (if Laravel: € = € + 1)</td>
+                <td><img src="/static/images/magarhita.jpeg" height="200px" width="200px"></td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td><strong>Python / Extension: Django</em></strong>
+              <td>Dangerous like a Python. <br>
+                Comes with tomato sauce, cheese and everything spicy that exists in this world.<br>
+                Make it Django if you want Habanero chili flakes on it.<br>
+                (If you do, we have nothing to do with it.)</td>
+                <td><img src="/static/images/python-pizza.jpg" height="200px" width="200px"></td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td><strong>Javascript / Extension: JS Node</strong></td>
+                <td>A bit of everything you want. <br>
+                Choose your favourite toppings and style your own pizza the interactive way.<br>
+                Go for JS Node to have it all hidden in the backend in the good old Calzone style.</td>
+                <td><img src="/static/images/calzone.jpg" height="200px" width="200px"></td>
+                <td>12</td>
+              </tr>
+            <tr>
+                <td><strong>Java / Extension: None, this is way too special already</strong></td>
+                <td>The volcano of Java on your plate. <br>
+                The hot chili cheese lava is the most delicios dip.<br>
+                The other toppings apart from tomatoes and cheese? Choose up to three!</td>
+                <td><img src="/static/images/volcano-pizza.jpeg" height="200px" width="200px"></td>
+                <td>15</td>
+            </tr>
+
+          </table> 
+          <p><em>All the described meats and cheeses are vegan substitutes. So, no need to worry.<br>
+        Come to our restaurant to see the variety of toppings you can choose from displayed.</em></p>
+        </section>
+    <footer>
+        &copy; 2024 Vizze Restaurant. All rights reserved.
+    </footer>
+</body>

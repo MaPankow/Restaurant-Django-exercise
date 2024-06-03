@@ -1,0 +1,34 @@
+<h2>About Us</h2>
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>VIZZE Restaurant</title>
+    <link rel="icon" type="image/png" href="static/images/favicon-256x256.png">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body id="about">
+    <!-- Rest of your HTML code -->
+    <header>
+        <h1>VIZZE</h1>
+        <h2>Your best vegan Pizze in Berlin</h2>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="description">
+        <h3> Learn more about the quality that's in the pizze</h3>
+        <p>We're only using fresh ingredients that come from organic farms and producers.<br>
+        Our dough rests for 24 hours in our own REST-API.</p>
+    </section>
+    <footer>
+        &copy; 2024 Vizze Restaurant. All rights reserved.
+    </footer>
+</body>
