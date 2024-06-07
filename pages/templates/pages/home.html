@@ -1,37 +1,17 @@
-<h2>Home</h2>
-<!DOCTYPE html>
-{% load static %}
-<html>
-<head>
-    <title>VIZZE Restaurant</title>
-    <link rel="icon" type="image/png" href="static/images/favicon-256x256.png">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-</head>
+{% extends 'base.html' %}
+{% block content %}
 <body id="homepage">
-    <!-- Rest of your HTML code -->
-    <header>
-        <h1>VIZZE</h1>
-        <h2>Your best vegan Pizze in Berlin</h2>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/menu">Menu</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="description">
+    {% include 'nav.html' %}
+    <section>
         <h3>Welcome to our completely vegan Pizza restaurant!</h3>
         <p>Enjoy our delicious pizze made the traditional italian way.<br>
-        Before you think we can't do grammar, it's the plural of pizza in Italian<br>
+        Before you think we can't do grammar, it's the plural of pizza in Italian.<br>
         With the "V" in front of it sounds a bit like the German word for "jokes", "Witze".<br>
         Aren't we funny? No?
         Anyway, if you managed to read until here, you must have gotten hungry on your way.<br>
         We've got an idea how you could solve that problem right here on our page.</p>
     </section>
-    <footer>
-        &copy; 2024 Vizze Restaurant. All rights reserved.
-    </footer>
+    {% include 'footer.html'%}
 </body>
-</html>
+{% endblock %}
+

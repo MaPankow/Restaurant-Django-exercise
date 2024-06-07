@@ -3,11 +3,12 @@ body {
     background-color: #f2f2f2;
     margin: 0;
     padding: 0;
-    
+    height: 100vh;
 }
 
 #homepage {
-    background-image: url("/static/images/pizza-3010062_1920.jpg")
+    background-image: url("/static/images/pizza-3010062_1920.jpg");
+    height: 100%;
 }
 
 #about {
