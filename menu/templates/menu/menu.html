@@ -7,24 +7,80 @@
     </section>
 
     <section id="menu">
-
-        <table>
-            <tr class="table_head">
-              <th>Pizza</th>
-              <th>What's on it</th>
-              <th>Price in €</th>
-            </tr>
-            {% for menu in menu_list %}
-            <tr>
-              <td><strong>{{ menu.name }}</em></strong>
-              <td>{{ menu.description }}</td>              
-              <td>{{ menu.price }}</td>
-            </tr>
-            {% endfor %}
-          </table> 
-          <p><em>All the described meats and cheeses are vegan substitutes. So, no need to worry.<br>
+      <div class="drinks">
+        <h3>Drinks</h3> 
+        <table class="table">
+          <tr class="table_head">
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price in €</th>
+          </tr>
+          {% for drink in drinks_list %}
+          <tr>
+            <td><strong>{{ drink.name }}</em></strong>
+            <td>{{ drink.description }}</td>              
+            <td>{{ drink.price }}</td>
+          </tr>
+          {% endfor %}
+        </table> 
+      </div>
+      
+      <div class="starters">
+        <h3>Starters</h3> 
+        <table class="table">
+          <tr class="table_head">
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price in €</th>
+          </tr>
+          {% for starter in starters_list %}
+          <tr>
+            <td><strong>{{ starter.name }}</em></strong>
+            <td>{{ starter.description }}</td>              
+            <td>{{ starter.price }}</td>
+          </tr>
+          {% endfor %}
+        </table> 
+      </div>
+      
+      <div class="main_dishes">
+        <h3>Main Dishes</h3> 
+        <table class="table">
+          <tr class="table_head">
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price in €</th>
+          </tr>
+          {% for main_dish in main_dishes_list %}
+          <tr>
+            <td><strong>{{ main_dish.name }}</em></strong>
+            <td>{{ main_dish.description }}</td>              
+            <td>{{ main_dish.price }}</td>
+          </tr>
+          {% endfor %}
+        </table> 
+      </div>
+      
+      <div class="desserts">
+        <h3>Desserts</h3> 
+        <table class="table">
+          <tr class="table_head">
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price in €</th>
+          </tr>
+          {% for dessert in desserts_list %}
+          <tr>
+            <td><strong>{{ dessert.name }}</em></strong>
+            <td>{{ dessert.description }}</td>              
+            <td>{{ dessert.price }}</td>
+          </tr>
+          {% endfor %}
+        </table> 
+      </div>
+      <p><em>All the described meats and cheeses are vegan substitutes. So, no need to worry.<br>
         Come to our restaurant to see the variety of toppings you can choose from displayed.</em></p>
-        </section>
-        {% include 'footer.html' %}
+    </section>
+  {% include 'footer.html' %}
 </body>
 {% endblock %}

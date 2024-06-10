@@ -1,0 +1,17 @@
+<div class="drinks">
+    <h3>Drinks</h3> 
+    <table class="table">
+      <tr class="table_head">
+        <th>Item</th>
+        <th>Description</th>
+        <th>Price in €</th>
+      </tr>
+      {% for drink in drinks_list %}
+      <tr>
+        <td><strong>{{ drink.name }}</em></strong>
+        <td>{{ drink.description }}</td>              
+        <td>{{ drink.price }}</td>
+      </tr>
+      {% endfor %}
+    </table> 
+  </div>
