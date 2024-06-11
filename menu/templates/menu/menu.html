@@ -9,72 +9,81 @@
     <section id="menu">
       <div class="drinks">
         <h3>Drinks</h3> 
-        <table class="table">
+        <table style="width:100%; max-width:1000px;">
           <tr class="table_head">
             <th>Item</th>
             <th>Description</th>
             <th>Price in €</th>
           </tr>
-          {% for drink in drinks_list %}
+          {% for menu in menu_list %}
+          {% if menu.catgory_id == 1 %}
           <tr>
-            <td><strong>{{ drink.name }}</em></strong>
-            <td>{{ drink.description }}</td>              
-            <td>{{ drink.price }}</td>
+            <td><strong>{{ menu.name }}</em></strong>
+            <td>{{ menu.description }}</td>              
+            <td>{{ menu.price }}</td>
           </tr>
+          {% endif %}
           {% endfor %}
         </table> 
       </div>
+      
       
       <div class="starters">
         <h3>Starters</h3> 
-        <table class="table">
+        <table style="width:100%; max-width:1000px;">
           <tr class="table_head">
             <th>Item</th>
             <th>Description</th>
             <th>Price in €</th>
           </tr>
-          {% for starter in starters_list %}
+          {% for menu in menu_list %}
+          {% if menu.catgory_id == 3 %}
           <tr>
-            <td><strong>{{ starter.name }}</em></strong>
-            <td>{{ starter.description }}</td>              
-            <td>{{ starter.price }}</td>
+            <td><strong>{{ menu.name }}</em></strong>
+            <td>{{ menu.description }}</td>              
+            <td>{{ menu.price }}</td>
           </tr>
+          {% endif %}
           {% endfor %}
         </table> 
       </div>
-      
-      <div class="main_dishes">
-        <h3>Main Dishes</h3> 
-        <table class="table">
+
+      <div class="pizze">
+        <h3>Pizze</h3> 
+        <table style="width:100%; max-width:1000px;">
           <tr class="table_head">
             <th>Item</th>
             <th>Description</th>
             <th>Price in €</th>
           </tr>
-          {% for main_dish in main_dishes_list %}
+          {% for menu in menu_list %}
+          {% if menu.catgory_id == 4 %}
           <tr>
-            <td><strong>{{ main_dish.name }}</em></strong>
-            <td>{{ main_dish.description }}</td>              
-            <td>{{ main_dish.price }}</td>
+            <td><strong>{{ menu.name }}</em></strong>
+            <td>{{ menu.description }}</td>              
+            <td>{{ menu.price }}</td>
           </tr>
+          {% endif %}
           {% endfor %}
         </table> 
       </div>
       
       <div class="desserts">
         <h3>Desserts</h3> 
-        <table class="table">
+        <table style="width: 100%; max-width: 1000px;">
           <tr class="table_head">
             <th>Item</th>
             <th>Description</th>
             <th>Price in €</th>
           </tr>
-          {% for dessert in desserts_list %}
+          {% for menu in menu_list %}
+          {% if menu.catgory_id == 5 %}
           <tr>
-            <td><strong>{{ dessert.name }}</em></strong>
-            <td>{{ dessert.description }}</td>              
-            <td>{{ dessert.price }}</td>
+            <td><strong>{{ menu.name }}</em></strong>
+            <td>{{ menu.description }}</td>              
+            <td>{{ menu.price }}</td>
           </tr>
+          {% endif %}
           {% endfor %}
         </table> 
       </div>
