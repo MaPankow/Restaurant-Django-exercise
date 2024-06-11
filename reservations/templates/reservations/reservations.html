@@ -2,7 +2,20 @@
 {% block content %}
 <body>
     {% include 'nav.html' %}
-    <h3>Hier kannst du reservieren. Bald ...</h3>
+    <h3>Make your reservation!</h3>
+    
+    <form action='.' method='POST'>{% csrf_token %}
+        <label for="name">Name:</label><br>
+        <input type="text" name="name"><br>
+        <label for="date">Which day do you want to visit us?</label><br>
+        <input type="date" name="date"><br>
+        <label for="time">At which time do you arrive?</label><br>
+        <input type="time" name="time"><br>
+        <label for="num_guests">How many persons?</label><br>
+        <input type="number" name="num_guests" min="1" max="30"><br>
+        <input type='submit' value='Save'/>
+    </form>
+    
     {% include 'footer.html' %}
 </body>
 {% endblock %}

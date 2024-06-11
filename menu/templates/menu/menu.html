@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <body>
   {% include 'nav.html' %}
@@ -18,7 +19,7 @@
           {% for menu in menu_list %}
           {% if menu.catgory_id == 1 %}
           <tr>
-            <td><strong>{{ menu.name }}</em></strong>
+            <td><strong>{{ menu.name }}</strong></td>
             <td>{{ menu.description }}</td>              
             <td>{{ menu.price }}</td>
           </tr>
@@ -39,7 +40,7 @@
           {% for menu in menu_list %}
           {% if menu.catgory_id == 3 %}
           <tr>
-            <td><strong>{{ menu.name }}</em></strong>
+            <td><strong>{{ menu.name }}</strong></td>
             <td>{{ menu.description }}</td>              
             <td>{{ menu.price }}</td>
           </tr>
@@ -59,7 +60,7 @@
           {% for menu in menu_list %}
           {% if menu.catgory_id == 4 %}
           <tr>
-            <td><strong>{{ menu.name }}</em></strong>
+            <td><strong>{{ menu.name }}</strong></td>
             <td>{{ menu.description }}</td>              
             <td>{{ menu.price }}</td>
           </tr>
@@ -79,7 +80,7 @@
           {% for menu in menu_list %}
           {% if menu.catgory_id == 5 %}
           <tr>
-            <td><strong>{{ menu.name }}</em></strong>
+            <td><strong>{{ menu.name }}</strong></td>
             <td>{{ menu.description }}</td>              
             <td>{{ menu.price }}</td>
           </tr>
