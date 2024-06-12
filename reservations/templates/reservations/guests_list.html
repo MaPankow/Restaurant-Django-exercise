@@ -2,30 +2,33 @@
 {% extends 'base.html' %}
 {% block content %}
 <body>
-    {% include 'nav.html' %}
+  {% include 'nav.html' %}
 
     
-    <section id="menu">
-        <div class="drinks">
-            <h3>Guests</h3> 
-            <table style="width:100%; max-width:1000px;">
-                <tr class="table_head">
-                    <th>Name</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Persons</th>
-                    </tr>
-                {% for guest in guests_list %}
 
-            <tr>
-              <td><strong>{{ guest.name }}</strong></td>
-              <td>{{ guest.date }}</td>              
-              <td>{{ guest.time }}</td>
-              <td>{{ guest.num_guests }}</td>
-            </tr>
-
-            {% endfor %}
-          </table> 
-        </div>
-</body>
-{% endblock %}
+  <div class="guests_list">
+    <h3>Guests</h3> 
+    {% regroup guests_list by date as date_list %}
+  
+    {% for date in date_list %}
+      <h3>{{ date.grouper }}</h3>
+      <table>
+        <tr class="table_head">
+          <th>Name</th>
+          <th>Time</th>
+          <th>Persons</th>
+        </tr>
+        {% for guest in date.list %}
+        <tr>
+          <td>{{ guest.name }}</td>           
+          <td>{{ guest.time }}</td>
+          <td>{{ guest.num_guests }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    {% endfor %}
+  </div>
+    </body>
+    {% endblock %}
+      
+      

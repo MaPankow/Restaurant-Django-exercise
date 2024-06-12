@@ -8,88 +8,50 @@
     </section>
 
     <section id="menu">
-      <div class="drinks">
-        <h3>Drinks</h3> 
-        <table style="width:100%; max-width:1000px;">
-          <tr class="table_head">
-            <th>Item</th>
-            <th>Description</th>
-            <th>Price in €</th>
-          </tr>
-          {% for menu in menu_list %}
-          {% if menu.catgory_id == 1 %}
+      {% for category in menu_categories %}
+        <h3>{{ category.name }}</h3> 
+        <table class="menu">
           <tr>
-            <td><strong>{{ menu.name }}</strong></td>
-            <td>{{ menu.description }}</td>              
-            <td>{{ menu.price }}</td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-        </table> 
-      </div>
-      
-      
-      <div class="starters">
-        <h3>Starters</h3> 
-        <table style="width:100%; max-width:1000px;">
-          <tr class="table_head">
-            <th>Item</th>
+            <th>Name</th>
             <th>Description</th>
-            <th>Price in €</th>
+            <th>€</th>
           </tr>
-          {% for menu in menu_list %}
-          {% if menu.catgory_id == 3 %}
+          {% for item in category.items.all %}
+          
           <tr>
-            <td><strong>{{ menu.name }}</strong></td>
-            <td>{{ menu.description }}</td>              
-            <td>{{ menu.price }}</td>
+            <td><strong>{{ item.name }}</strong></td>
+            <td>{{ item.description }}</td>              
+            <td>{{ item.price }}</td>
           </tr>
-          {% endif %}
-          {% endfor %}
+         
+        {% endfor %}
         </table> 
-      </div>
 
-      <div class="pizze">
-        <h3>Pizze</h3> 
-        <table style="width:100%; max-width:1000px;">
-          <tr class="table_head">
-            <th>Item</th>
-            <th>Description</th>
-            <th>Price in €</th>
-          </tr>
-          {% for menu in menu_list %}
-          {% if menu.catgory_id == 4 %}
-          <tr>
-            <td><strong>{{ menu.name }}</strong></td>
-            <td>{{ menu.description }}</td>              
-            <td>{{ menu.price }}</td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-        </table> 
-      </div>
       
-      <div class="desserts">
-        <h3>Desserts</h3> 
-        <table style="width: 100%; max-width: 1000px;">
-          <tr class="table_head">
-            <th>Item</th>
-            <th>Description</th>
-            <th>Price in €</th>
-          </tr>
-          {% for menu in menu_list %}
-          {% if menu.catgory_id == 5 %}
-          <tr>
-            <td><strong>{{ menu.name }}</strong></td>
-            <td>{{ menu.description }}</td>              
-            <td>{{ menu.price }}</td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-        </table> 
-      </div>
+      
+      {% endfor%}
       <p><em>All the described meats and cheeses are vegan substitutes. So, no need to worry.<br>
         Come to our restaurant to see the variety of toppings you can choose from displayed.</em></p>
+        <div class="row">
+          <div class="column">
+            <figure>
+              <img src="/static/images/python-pizza.jpg" alt="Python Pizza" style="width:100%">
+              <figcaption>Python Pizza</figcaption>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="/static/images/calzone.jpg" alt="Node.js Pizza" style="width:100%">
+              <figcaption>Node.js Pizza</figcaption>
+            </figure>
+          </div>
+          <div class="column">
+            <figure>
+              <img src="/static/images/volcano-pizza.jpeg" alt="Java Pizza" style="width:100%">
+              <figcaption>Java Pizza</figcaption>
+            </figure>
+          </div>
+        </div> 
     </section>
   {% include 'footer.html' %}
 </body>

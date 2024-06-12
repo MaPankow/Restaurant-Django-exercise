@@ -4,7 +4,8 @@
     {% include 'nav.html' %}
     <h3>Make your reservation!</h3>
     
-    <form action='.' method='POST'>{% csrf_token %}
+    <form action='' method='POST'>
+        {% csrf_token %}
         <label for="name">Name:</label><br>
         <input type="text" name="name"><br>
         <label for="date">Which day do you want to visit us?</label><br>

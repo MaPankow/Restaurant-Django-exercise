@@ -8,9 +8,9 @@ from .models import MenuItem, MenuCategory
 
 def menu_list(request):
     #menu_list = MenuItem.objects.all()
-    menu_list = MenuItem.objects.all()
+    menu_categories = MenuCategory.objects.all()
     context = {
-        'menu_list': menu_list
+        'menu_categories': menu_categories
     }
     return render(request, 'menu/menu.html', context)
 
