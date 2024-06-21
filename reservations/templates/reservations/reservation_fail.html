@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+    {% include 'nav.html' %}
+    <h3>Sorry, we're booked up for that day. We hope to see you another day!</h3>
+    
+    <form action="/">
+        {% csrf_token %}
+        <input type="button" value="Zurück" onClick="javascript:history.back()">
+    </form>
+
+
+    {% include 'footer.html' %}
+</body>
+{% endblock %}
