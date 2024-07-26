@@ -23,7 +23,6 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('menu/', include('menu.urls')),
     path('reservation/', include('reservations.urls')),
-    path('order/', include('orders.urls')),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),

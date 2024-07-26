@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'pages',
     'menu',
     'reservations',
-    'orders', 
     'rest_framework', 
     'drf_spectacular',  
 ]
