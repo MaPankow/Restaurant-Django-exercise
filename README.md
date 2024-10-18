@@ -1,6 +1,8 @@
 # Restaurant Django Exercise
 
-The task was to implement a website for a restaurant.
+The source of the exercise can be found here: https://github.com/hielsnoppe/restaurant-django-exercise/tree/main
+
+The tasks are as followed:
 
 The website should feature the following pages:
 
